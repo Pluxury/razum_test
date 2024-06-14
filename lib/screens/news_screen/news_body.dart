@@ -21,6 +21,12 @@ class _NewsBodyState extends State<_NewsBody> {
         }
 
         if (state is NewsFetchingSuccess) {
+          if (state.articles.isEmpty) {
+            return const Center(
+              child: Text('Пустой список'),
+            );
+          }
+
           return ListView.builder(itemBuilder: (context, index) {
             final item = state.articles[index];
 
