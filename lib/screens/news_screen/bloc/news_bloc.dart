@@ -26,7 +26,7 @@ class NewsBloc extends Bloc<NewsEvent, NewsState> {
 
       emit(NewsFetchingSuccess(articles: articles));
     } else {
-      emit(NewsFetchingError());
+      emit(NewsFetchingError(errorMessage: result.hasError ? result.error! : 'General error'));
     }
   }
 }

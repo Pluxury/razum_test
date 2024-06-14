@@ -13,4 +13,8 @@ final class NewsFetchingSuccess extends NewsState {
   NewsFetchingSuccess({required this.articles});
 }
 
-final class NewsFetchingError extends NewsState {}
+final class NewsFetchingError extends NewsState {
+  final String errorMessage;
+
+  NewsFetchingError({required this.errorMessage});
+}
