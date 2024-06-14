@@ -18,8 +18,8 @@ final class _$NewsApiService extends NewsApiService {
   final Type definitionType = NewsApiService;
 
   @override
-  Future<Response<List<ArticleDto>>> getArticle(String type) {
-    final Uri $url = Uri.parse('https://newsapi.org/v2/everything');
+  Future<Response<AllArticlesDto>> getArticles(String type) {
+    final Uri $url = Uri.parse('/everything');
     final Map<String, dynamic> $params = <String, dynamic>{'q': type};
     final Request $request = Request(
       'GET',
@@ -27,6 +27,6 @@ final class _$NewsApiService extends NewsApiService {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<List<ArticleDto>, ArticleDto>($request);
+    return client.send<AllArticlesDto, AllArticlesDto>($request);
   }
 }

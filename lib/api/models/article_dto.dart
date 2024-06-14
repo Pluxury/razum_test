@@ -5,26 +5,26 @@ part 'article_dto.g.dart';
 @JsonSerializable()
 class ArticleDto {
   @JsonKey(name: 'author')
-  final String author;
+  final String? author;
   @JsonKey(name: 'title')
-  final String title;
+  final String? title;
   @JsonKey(name: 'description')
-  final String description;
+  final String? description;
   @JsonKey(name: 'url')
-  final String url;
-  @JsonKey(name: 'utlToImage')
-  final String utlToImage;
+  final String? url;
+  @JsonKey(name: 'urlToImage')
+  final String? urlToImage;
   @JsonKey(name: 'publishedAt')
-  final DateTime publishedAt;
+  final DateTime? publishedAt;
   @JsonKey(name: 'content')
-  final String content;
+  final String? content;
 
   ArticleDto({
     required this.author,
     required this.title,
     required this.description,
     required this.url,
-    required this.utlToImage,
+    required this.urlToImage,
     required this.publishedAt,
     required this.content,
   });

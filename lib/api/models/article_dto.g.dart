@@ -7,13 +7,15 @@ part of 'article_dto.dart';
 // **************************************************************************
 
 ArticleDto _$ArticleDtoFromJson(Map<String, dynamic> json) => ArticleDto(
-      author: json['author'] as String,
-      title: json['title'] as String,
-      description: json['description'] as String,
-      url: json['url'] as String,
-      utlToImage: json['utlToImage'] as String,
-      publishedAt: DateTime.parse(json['publishedAt'] as String),
-      content: json['content'] as String,
+      author: json['author'] as String?,
+      title: json['title'] as String?,
+      description: json['description'] as String?,
+      url: json['url'] as String?,
+      urlToImage: json['urlToImage'] as String?,
+      publishedAt: json['publishedAt'] == null
+          ? null
+          : DateTime.parse(json['publishedAt'] as String),
+      content: json['content'] as String?,
     );
 
 Map<String, dynamic> _$ArticleDtoToJson(ArticleDto instance) =>
@@ -22,7 +24,7 @@ Map<String, dynamic> _$ArticleDtoToJson(ArticleDto instance) =>
       'title': instance.title,
       'description': instance.description,
       'url': instance.url,
-      'utlToImage': instance.utlToImage,
-      'publishedAt': instance.publishedAt.toIso8601String(),
+      'urlToImage': instance.urlToImage,
+      'publishedAt': instance.publishedAt?.toIso8601String(),
       'content': instance.content,
     };

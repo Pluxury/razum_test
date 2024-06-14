@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:razum_test/screens/root_screen.dart';
 
+import 'core/dependency/dependency.dart' as dependency;
+
 void main() {
+  dependency.init();
+
   runApp(const MainApp());
 }
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:razum_test/screens/buildings_screen/buildings_screen.dart';
+import 'package:razum_test/screens/news_screen/news_screen.dart';
 
 class RootScreen extends StatefulWidget {
   const RootScreen({super.key});
@@ -14,7 +14,7 @@ class _RootScreenState extends State<RootScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const BuildingsScreen(),
+      body: const NewsScreen(),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: (index) {
